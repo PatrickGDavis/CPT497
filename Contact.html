@@ -1,0 +1,72 @@
+<!--CPT497 contact page-->
+<!Doctype html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<title>CPT497 Patrick Davis Contact Page</title>
+	<style>
+	@import url("styles/main-styles.css");
+	@import url("styles/contact-style.css");
+	body{
+		background-color: #faf2e4;
+		margin: 0 10%;
+		font-family: sans-serif;
+		}
+	h1 {
+		text-align: center;
+		font-family: serif;
+		font-weight: normal;
+		text-transform: uppercase;
+		border-bottom: 1px solid #57b1dc
+		margin-top: 30px;
+		}
+	h2 {
+		color: #d1633c;
+		font-size: 1em;
+		}
+	</style>
+	
+	<script>
+		function sendMail() {
+			var subject = document.getElementById("subject").value
+			var message = document.getElementById("message").value
+			window.location.href = 'mailto:patrick.davis@sckans.edu?subject=' + subject + '&body=' + message
+			location.href = 'thankyou.html'
+			};
+	</script>
+
+</head>
+
+<body>
+	<header>
+	<nav>
+			<ul class="topNav">
+				<li class="topNav"><a href="index.html"> Home</a></li>
+				<li class="topNav"><a href="Commercial.html"> Commercial Aircraft</a></li>
+				<li class="topNav"><a href="Business.html"> Business-Class Aircraft</a></li>
+				<li class="topNav"><a href="Space.html"> Space Technology</a></li>
+				<li class="topNav"><a href="Advanced.html"> Advanced Technology</a></li>
+				<li class="topNav"><a href="Defense.html"> Defensive Technologies</a></li>
+				<li class="topNav active"><a href=""> Contact Us</a></li>
+			</ul>
+	<nav>
+	</header>
+<main>
+	<div class="container">
+	  <form>
+		<label for="Subject">Subject</label>
+		<input type="text" id="subject" name="subject" placeholder="Subject:">
+
+		<label for="body">Message</label>
+		<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+		<button type="button" onclick="sendMail()">Submit</button>
+	  </form>	  
+	</div>
+</main>
+	<footer>
+			<a href="index.html"> Home </a>
+	</footer>
+</body>
+</html>
